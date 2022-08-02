@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random password generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="generator-wrapper">
+        <h1 class="generator-title">Password Generator</h1>
+        <div class="generator">
+          <input type="text" class="random-password" />
+          <div>
+            <button type="button" class="btn generate-btn">Generate</button>
+            <button type="button" class="btn copy-btn">Copy</button>
+          </div>
+          <div class="notification">Copied!</div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/passwordGenerator.js"></script>
+  </body>
+</html>

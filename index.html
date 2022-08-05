@@ -4,30 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random password generator</title>
+    <title>Password generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Space+Mono&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
-      <div class="generator-wrapper">
+      <div class="container">
         <h1 class="generator-title">Password Generator</h1>
-        <div class="generator">
-          <input type="text" class="random-password" />
-          <div>
-            <button type="button" class="btn generate-btn">Generate</button>
-            <button type="button" class="btn copy-btn">Copy</button>
+        <div class="generator-wrapper">
+          <div class="generator">
+            <input type="text" class="generator__password" />
+            <div>
+              <button type="button" class="btn generator__btn_generate">
+                Generate
+              </button>
+              <button type="button" class="btn generator__btn_copy">
+                Copy
+              </button>
+            </div>
+            <div class="generator__notification">Copied!</div>
           </div>
-          <div class="notification">Copied!</div>
+
+          <div class="options">
+            <form class="length">
+              <div class="form-group length__slider">
+                <label
+                  ><span>Password length:&nbsp;</span
+                  ><span class="length__value"></span
+                ></label>
+                <input type="range" step="1" />
+              </div>
+
+              <div class="checkboxes">
+                <span>
+                  <input type="checkbox" id="uppercase" checked />
+                  <label for="uppercase">Uppercase letters</label>
+                </span>
+
+                <span>
+                  <input type="checkbox" id="lowercase" checked />
+                  <label for="lowercase">Lowercase letters</label>
+                </span>
+
+                <span>
+                  <input type="checkbox" id="number" checked />
+                  <label for="number">Numbers</label>
+                </span>
+
+                <span>
+                  <input type="checkbox" id="symbol" />
+                  <label for="symbol">Symbols</label>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </main>
 
+    <script src="./js/customSlider.js"></script>
     <script src="./js/passwordGenerator.js"></script>
   </body>
 </html>
